@@ -9,10 +9,6 @@ yo = re.compile(r'\byo\b', re.IGNORECASE)
 async def on_ready():
     print("Armada y preparada")
     
-@Kobeni.command()
-async def gap(ctx):
-    await ctx.send("Jg gap")
-
 @Kobeni.tree.command(name="ping", description="Primer comando solo de prueba")
 async def ping(interaction: discord.Interaction):
    await interaction.response.send_message('pong')
@@ -53,8 +49,8 @@ async def on_message(message):
 
     if "jg gap" in message.content.lower():
         await message.channel.send("https://www.youtube.com/watch?v=onY9eHi_eco")
-        
-        
+
+    #solo quiero dejar un comentario para hacer un push desde la mac
     # Este comando se encarga de asegurarse de cerrar este bloque de función y que todo funcione como debería
     await Kobeni.process_commands(message)
 
