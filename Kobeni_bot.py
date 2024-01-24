@@ -9,10 +9,13 @@ yo = re.compile(r'\byo\b', re.IGNORECASE)
 async def on_ready():
     print("Armada y preparada")
     
+<<<<<<< HEAD
 @Kobeni.tree.command(name="jg", description="jg gap papa gg izi")
 async def ping(interaction: discord.Interaction):
     await interaction.response.send_message('jg gap https://www.youtube.com/watch?v=onY9eHi_eco')
 
+=======
+>>>>>>> a40b0d448a8ee4b0c2e20fcafa51f58719e7781a
 @Kobeni.tree.command(name="ping", description="Primer comando solo de prueba")
 async def ping(interaction: discord.Interaction):
    await interaction.response.send_message('pong')
@@ -50,7 +53,15 @@ async def on_message(message):
 
     if "matalo" in message.content.lower():
         await message.channel.send("https://tenor.com/view/ahmet-sonmez-ahmet-s%c3%b6nmez-kledistan-malphite-durdurulamaz-gif-25384645")
+<<<<<<< HEAD
         
+=======
+
+    if "jg gap" in message.content.lower():
+        await message.channel.send("https://www.youtube.com/watch?v=onY9eHi_eco")
+
+    #solo quiero dejar un comentario para hacer un push desde la mac
+>>>>>>> a40b0d448a8ee4b0c2e20fcafa51f58719e7781a
     # Este comando se encarga de asegurarse de cerrar este bloque de función y que todo funcione como debería
     await Kobeni.process_commands(message)
 
