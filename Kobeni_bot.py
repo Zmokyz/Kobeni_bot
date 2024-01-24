@@ -9,9 +9,9 @@ yo = re.compile(r'\byo\b', re.IGNORECASE)
 async def on_ready():
     print("Armada y preparada")
     
-@Kobeni.command()
-async def gap(ctx):
-    await ctx.send("Jg gap")
+@Kobeni.tree.command(name="jg", description="jg gap papa gg izi")
+async def ping(interaction: discord.Interaction):
+    await interaction.response.send_message('jg gap https://www.youtube.com/watch?v=onY9eHi_eco')
 
 @Kobeni.tree.command(name="ping", description="Primer comando solo de prueba")
 async def ping(interaction: discord.Interaction):
@@ -50,10 +50,6 @@ async def on_message(message):
 
     if "matalo" in message.content.lower():
         await message.channel.send("https://tenor.com/view/ahmet-sonmez-ahmet-s%c3%b6nmez-kledistan-malphite-durdurulamaz-gif-25384645")
-
-    if "jg gap" in message.content.lower():
-        await message.channel.send("https://www.youtube.com/watch?v=onY9eHi_eco")
-        
         
     # Este comando se encarga de asegurarse de cerrar este bloque de función y que todo funcione como debería
     await Kobeni.process_commands(message)
