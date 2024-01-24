@@ -45,7 +45,7 @@ async def on_message(message):
         await message.channel.send(f"Tu eres la Negra {message.author.name}!")
 
     # Verificar si "yo" está presente y no está rodeado por otras letras
-    if re.search(r'\b(?:yo)\b', message.content.lower()) and not re.search(r'(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/', message.content):
+    if ' yo ' in message.content.lower() and not re.search(r'(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/', message.content):
         await message.channel.send("¡Sí, eres amigui >.<!")
 
     if "matalo" in message.content.lower():
